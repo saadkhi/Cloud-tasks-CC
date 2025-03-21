@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cc-database-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cc-database
+  template:
+    metadata:
+      labels:
+        app: cc-database
+    spec:
+      containers:
+      - name: fastapi-app
+        image: saadpk/cc_database:latest
+        ports:
+        - containerPort: 8000
