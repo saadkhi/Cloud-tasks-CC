@@ -1,0 +1,181 @@
+20:02:20.490730 git.c:463               trace: built-in: git push origin main
+20:02:20.491300 run-command.c:659       trace: run_command: GIT_DIR=.git git remote-https origin https://github.com/saadkhi/Cloud-tasks-CC.git
+20:02:20.493101 git.c:749               trace: exec: git-remote-https origin https://github.com/saadkhi/Cloud-tasks-CC.git
+20:02:20.493138 run-command.c:659       trace: run_command: git-remote-https origin https://github.com/saadkhi/Cloud-tasks-CC.git
+20:02:20.498528 http.c:845              == Info: Couldn't find host github.com in the .netrc file; using defaults
+20:02:21.753765 http.c:845              == Info: Host github.com:443 was resolved.
+20:02:21.753793 http.c:845              == Info: IPv6: (none)
+20:02:21.753807 http.c:845              == Info: IPv4: 20.207.73.82
+20:02:21.753841 http.c:845              == Info:   Trying 20.207.73.82:443...
+20:02:21.832408 http.c:845              == Info: Connected to github.com (20.207.73.82) port 443
+20:02:21.889041 http.c:845              == Info: found 441 certificates in /etc/ssl/certs
+20:02:21.889122 http.c:845              == Info: GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+20:02:21.889155 http.c:845              == Info: ALPN: curl offers h2,http/1.1
+20:02:22.109741 http.c:845              == Info: SSL connection using TLS1.3 / ECDHE_RSA_AES_128_GCM_SHA256
+20:02:22.113725 http.c:845              == Info:   server certificate verification OK
+20:02:22.113740 http.c:845              == Info:   server certificate status verification SKIPPED
+20:02:22.113879 http.c:845              == Info:   common name: github.com (matched)
+20:02:22.113894 http.c:845              == Info:   server certificate expiration date OK
+20:02:22.113899 http.c:845              == Info:   server certificate activation date OK
+20:02:22.113911 http.c:845              == Info:   certificate public key: EC/ECDSA
+20:02:22.113916 http.c:845              == Info:   certificate version: #3
+20:02:22.113931 http.c:845              == Info:   subject: CN=github.com
+20:02:22.113938 http.c:845              == Info:   start date: Wed, 05 Feb 2025 00:00:00 GMT
+20:02:22.113944 http.c:845              == Info:   expire date: Thu, 05 Feb 2026 23:59:59 GMT
+20:02:22.113976 http.c:845              == Info:   issuer: C=GB,ST=Greater Manchester,L=Salford,O=Sectigo Limited,CN=Sectigo ECC Domain Validation Secure Server CA
+20:02:22.113995 http.c:845              == Info: ALPN: server accepted h2
+20:02:22.114110 http.c:845              == Info: using HTTP/2
+20:02:22.114192 http.c:845              == Info: [HTTP/2] [1] OPENED stream for https://github.com/saadkhi/Cloud-tasks-CC.git/info/refs?service=git-receive-pack
+20:02:22.114236 http.c:845              == Info: [HTTP/2] [1] [:method: GET]
+20:02:22.114244 http.c:845              == Info: [HTTP/2] [1] [:scheme: https]
+20:02:22.114248 http.c:845              == Info: [HTTP/2] [1] [:authority: github.com]
+20:02:22.114252 http.c:845              == Info: [HTTP/2] [1] [:path: /saadkhi/Cloud-tasks-CC.git/info/refs?service=git-receive-pack]
+20:02:22.114256 http.c:845              == Info: [HTTP/2] [1] [user-agent: git/2.43.0]
+20:02:22.114260 http.c:845              == Info: [HTTP/2] [1] [accept: */*]
+20:02:22.114263 http.c:845              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip, br, zstd]
+20:02:22.114267 http.c:845              == Info: [HTTP/2] [1] [accept-language: en-US, *;q=0.9]
+20:02:22.114271 http.c:845              == Info: [HTTP/2] [1] [pragma: no-cache]
+20:02:22.114313 http.c:792              => Send header, 0000000225 bytes (0x000000e1)
+20:02:22.114322 http.c:804              => Send header: GET /saadkhi/Cloud-tasks-CC.git/info/refs?service=git-receive-pack HTTP/2
+20:02:22.114326 http.c:804              => Send header: Host: github.com
+20:02:22.114328 http.c:804              => Send header: User-Agent: git/2.43.0
+20:02:22.114331 http.c:804              => Send header: Accept: */*
+20:02:22.114334 http.c:804              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+20:02:22.114337 http.c:804              => Send header: Accept-Language: en-US, *;q=0.9
+20:02:22.114340 http.c:804              => Send header: Pragma: no-cache
+20:02:22.114342 http.c:804              => Send header:
+20:02:22.518131 http.c:792              <= Recv header, 0000000013 bytes (0x0000000d)
+20:02:22.518147 http.c:804              <= Recv header: HTTP/2 401
+20:02:22.518152 http.c:792              <= Recv header, 0000000026 bytes (0x0000001a)
+20:02:22.518155 http.c:804              <= Recv header: server: GitHub-Babel/3.0
+20:02:22.518158 http.c:792              <= Recv header, 0000000054 bytes (0x00000036)
+20:02:22.518160 http.c:804              <= Recv header: content-security-policy: default-src 'none'; sandbox
+20:02:22.518164 http.c:792              <= Recv header, 0000000041 bytes (0x00000029)
+20:02:22.518166 http.c:804              <= Recv header: content-type: text/plain; charset=UTF-8
+20:02:22.518169 http.c:792              <= Recv header, 0000000040 bytes (0x00000028)
+20:02:22.518171 http.c:804              <= Recv header: www-authenticate: Basic realm="GitHub"
+20:02:22.518174 http.c:792              <= Recv header, 0000000020 bytes (0x00000014)
+20:02:22.518176 http.c:804              <= Recv header: content-length: 26
+20:02:22.518179 http.c:792              <= Recv header, 0000000037 bytes (0x00000025)
+20:02:22.518181 http.c:804              <= Recv header: date: Thu, 13 Nov 2025 15:02:22 GMT
+20:02:22.518185 http.c:792              <= Recv header, 0000000023 bytes (0x00000017)
+20:02:22.518188 http.c:804              <= Recv header: x-frame-options: DENY
+20:02:22.518192 http.c:792              <= Recv header, 0000000073 bytes (0x00000049)
+20:02:22.518195 http.c:804              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+20:02:22.518198 http.c:792              <= Recv header, 0000000056 bytes (0x00000038)
+20:02:22.518201 http.c:804              <= Recv header: x-github-request-id: F14A:F1618:1433E0:16E853:6915F2FD
+20:02:22.518205 http.c:792              <= Recv header, 0000000002 bytes (0x00000002)
+20:02:22.518219 http.c:804              <= Recv header:
+20:02:22.518231 http.c:845              == Info: Connection #0 to host github.com left intact
+20:02:22.518269 run-command.c:659       trace: run_command: /snap/code/211/usr/share/code/resources/app/extensions/git/dist/askpass.sh 'Username for '\''https://github.com'\'': '
+20:02:22.673428 run-command.c:659       trace: run_command: /snap/code/211/usr/share/code/resources/app/extensions/git/dist/askpass.sh 'Password for '\''https://79059375@github.com'\'': '
+20:02:22.821090 http.c:845              == Info: Found bundle for host: 0x618ebe386740 [can multiplex]
+20:02:22.821108 http.c:845              == Info: Re-using existing connection with host github.com
+20:02:22.821123 http.c:845              == Info: Server auth using Basic with user '79059375'
+20:02:22.821160 http.c:845              == Info: [HTTP/2] [3] OPENED stream for https://github.com/saadkhi/Cloud-tasks-CC.git/info/refs?service=git-receive-pack
+20:02:22.821169 http.c:845              == Info: [HTTP/2] [3] [:method: GET]
+20:02:22.821173 http.c:845              == Info: [HTTP/2] [3] [:scheme: https]
+20:02:22.821176 http.c:845              == Info: [HTTP/2] [3] [:authority: github.com]
+20:02:22.821180 http.c:845              == Info: [HTTP/2] [3] [:path: /saadkhi/Cloud-tasks-CC.git/info/refs?service=git-receive-pack]
+20:02:22.821185 http.c:845              == Info: [HTTP/2] [3] [authorization: Basic <redacted>]
+20:02:22.821188 http.c:845              == Info: [HTTP/2] [3] [user-agent: git/2.43.0]
+20:02:22.821191 http.c:845              == Info: [HTTP/2] [3] [accept: */*]
+20:02:22.821194 http.c:845              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip, br, zstd]
+20:02:22.821198 http.c:845              == Info: [HTTP/2] [3] [accept-language: en-US, *;q=0.9]
+20:02:22.821202 http.c:845              == Info: [HTTP/2] [3] [pragma: no-cache]
+20:02:22.821301 http.c:792              => Send header, 0000000316 bytes (0x0000013c)
+20:02:22.821316 http.c:804              => Send header: GET /saadkhi/Cloud-tasks-CC.git/info/refs?service=git-receive-pack HTTP/2
+20:02:22.821320 http.c:804              => Send header: Host: github.com
+20:02:22.821323 http.c:804              => Send header: Authorization: Basic <redacted>
+20:02:22.821325 http.c:804              => Send header: User-Agent: git/2.43.0
+20:02:22.821328 http.c:804              => Send header: Accept: */*
+20:02:22.821331 http.c:804              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+20:02:22.821333 http.c:804              => Send header: Accept-Language: en-US, *;q=0.9
+20:02:22.821336 http.c:804              => Send header: Pragma: no-cache
+20:02:22.821338 http.c:804              => Send header:
+20:02:23.235165 http.c:792              <= Recv header, 0000000013 bytes (0x0000000d)
+20:02:23.235181 http.c:804              <= Recv header: HTTP/2 200
+20:02:23.235198 http.c:792              <= Recv header, 0000000026 bytes (0x0000001a)
+20:02:23.235201 http.c:804              <= Recv header: server: GitHub-Babel/3.0
+20:02:23.235204 http.c:792              <= Recv header, 0000000060 bytes (0x0000003c)
+20:02:23.235216 http.c:804              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+20:02:23.235220 http.c:792              <= Recv header, 0000000054 bytes (0x00000036)
+20:02:23.235224 http.c:804              <= Recv header: content-security-policy: default-src 'none'; sandbox
+20:02:23.235226 http.c:792              <= Recv header, 0000000040 bytes (0x00000028)
+20:02:23.235228 http.c:804              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+20:02:23.235230 http.c:792              <= Recv header, 0000000018 bytes (0x00000012)
+20:02:23.235232 http.c:804              <= Recv header: pragma: no-cache
+20:02:23.235234 http.c:792              <= Recv header, 0000000053 bytes (0x00000035)
+20:02:23.235236 http.c:804              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+20:02:23.235239 http.c:792              <= Recv header, 0000000023 bytes (0x00000017)
+20:02:23.235242 http.c:804              <= Recv header: vary: Accept-Encoding
+20:02:23.235245 http.c:792              <= Recv header, 0000000037 bytes (0x00000025)
+20:02:23.235248 http.c:804              <= Recv header: date: Thu, 13 Nov 2025 15:02:23 GMT
+20:02:23.235251 http.c:792              <= Recv header, 0000000023 bytes (0x00000017)
+20:02:23.235256 http.c:804              <= Recv header: x-frame-options: DENY
+20:02:23.235259 http.c:792              <= Recv header, 0000000073 bytes (0x00000049)
+20:02:23.235262 http.c:804              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+20:02:23.235266 http.c:792              <= Recv header, 0000000056 bytes (0x00000038)
+20:02:23.235270 http.c:804              <= Recv header: x-github-request-id: F14A:F1618:143471:16E90F:6915F2FE
+20:02:23.235275 http.c:792              <= Recv header, 0000000002 bytes (0x00000002)
+20:02:23.235278 http.c:804              <= Recv header:
+20:02:23.235295 http.c:845              == Info: Connection #0 to host github.com left intact
+20:02:23.236355 run-command.c:659       trace: run_command: git send-pack --stateless-rpc --helper-status --thin --no-progress https://github.com/saadkhi/Cloud-tasks-CC.git/ --stdin
+20:02:23.239184 git.c:463               trace: built-in: git send-pack --stateless-rpc --helper-status --thin --no-progress https://github.com/saadkhi/Cloud-tasks-CC.git/ --stdin
+20:02:23.240134 run-command.c:659       trace: run_command: git pack-objects --all-progress-implied --revs --stdout --thin --delta-base-offset -q
+20:02:23.242477 git.c:463               trace: built-in: git pack-objects --all-progress-implied --revs --stdout --thin --delta-base-offset -q
+20:02:23.247289 http.c:845              == Info: Found bundle for host: 0x618ebe386740 [can multiplex]
+20:02:23.247322 http.c:845              == Info: Re-using existing connection with host github.com
+20:02:23.247341 http.c:845              == Info: Server auth using Basic with user '79059375'
+20:02:23.247406 http.c:845              == Info: [HTTP/2] [5] OPENED stream for https://github.com/saadkhi/Cloud-tasks-CC.git/git-receive-pack
+20:02:23.247416 http.c:845              == Info: [HTTP/2] [5] [:method: POST]
+20:02:23.247420 http.c:845              == Info: [HTTP/2] [5] [:scheme: https]
+20:02:23.247423 http.c:845              == Info: [HTTP/2] [5] [:authority: github.com]
+20:02:23.247427 http.c:845              == Info: [HTTP/2] [5] [:path: /saadkhi/Cloud-tasks-CC.git/git-receive-pack]
+20:02:23.247431 http.c:845              == Info: [HTTP/2] [5] [authorization: Basic <redacted>]
+20:02:23.247435 http.c:845              == Info: [HTTP/2] [5] [user-agent: git/2.43.0]
+20:02:23.247438 http.c:845              == Info: [HTTP/2] [5] [accept-encoding: deflate, gzip, br, zstd]
+20:02:23.247442 http.c:845              == Info: [HTTP/2] [5] [content-type: application/x-git-receive-pack-request]
+20:02:23.247447 http.c:845              == Info: [HTTP/2] [5] [accept: application/x-git-receive-pack-result]
+20:02:23.247451 http.c:845              == Info: [HTTP/2] [5] [accept-language: en-US, *;q=0.9]
+20:02:23.247454 http.c:845              == Info: [HTTP/2] [5] [content-length: 1901]
+20:02:23.247552 http.c:792              => Send header, 0000000391 bytes (0x00000187)
+20:02:23.247565 http.c:804              => Send header: POST /saadkhi/Cloud-tasks-CC.git/git-receive-pack HTTP/2
+20:02:23.247568 http.c:804              => Send header: Host: github.com
+20:02:23.247571 http.c:804              => Send header: Authorization: Basic <redacted>
+20:02:23.247574 http.c:804              => Send header: User-Agent: git/2.43.0
+20:02:23.247576 http.c:804              => Send header: Accept-Encoding: deflate, gzip, br, zstd
+20:02:23.247581 http.c:804              => Send header: Content-Type: application/x-git-receive-pack-request
+20:02:23.247583 http.c:804              => Send header: Accept: application/x-git-receive-pack-result
+20:02:23.247586 http.c:804              => Send header: Accept-Language: en-US, *;q=0.9
+20:02:23.247591 http.c:804              => Send header: Content-Length: 1901
+20:02:23.247593 http.c:804              => Send header:
+20:02:23.872417 http.c:792              <= Recv header, 0000000013 bytes (0x0000000d)
+20:02:23.872444 http.c:804              <= Recv header: HTTP/2 200
+20:02:23.872451 http.c:792              <= Recv header, 0000000026 bytes (0x0000001a)
+20:02:23.872455 http.c:804              <= Recv header: server: GitHub-Babel/3.0
+20:02:23.872458 http.c:792              <= Recv header, 0000000053 bytes (0x00000035)
+20:02:23.872461 http.c:804              <= Recv header: content-type: application/x-git-receive-pack-result
+20:02:23.872465 http.c:792              <= Recv header, 0000000054 bytes (0x00000036)
+20:02:23.872467 http.c:804              <= Recv header: content-security-policy: default-src 'none'; sandbox
+20:02:23.872470 http.c:792              <= Recv header, 0000000040 bytes (0x00000028)
+20:02:23.872474 http.c:804              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+20:02:23.872478 http.c:792              <= Recv header, 0000000018 bytes (0x00000012)
+20:02:23.872481 http.c:804              <= Recv header: pragma: no-cache
+20:02:23.872486 http.c:792              <= Recv header, 0000000053 bytes (0x00000035)
+20:02:23.872489 http.c:804              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+20:02:23.872494 http.c:792              <= Recv header, 0000000023 bytes (0x00000017)
+20:02:23.872498 http.c:804              <= Recv header: vary: Accept-Encoding
+20:02:23.872502 http.c:792              <= Recv header, 0000000037 bytes (0x00000025)
+20:02:23.872507 http.c:804              <= Recv header: date: Thu, 13 Nov 2025 15:02:23 GMT
+20:02:23.872511 http.c:792              <= Recv header, 0000000023 bytes (0x00000017)
+20:02:23.872515 http.c:804              <= Recv header: x-frame-options: DENY
+20:02:23.872519 http.c:792              <= Recv header, 0000000073 bytes (0x00000049)
+20:02:23.872522 http.c:804              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+20:02:23.872525 http.c:792              <= Recv header, 0000000056 bytes (0x00000038)
+20:02:23.872528 http.c:804              <= Recv header: x-github-request-id: F14A:F1618:1434E0:16E975:6915F2FF
+20:02:23.872534 http.c:792              <= Recv header, 0000000002 bytes (0x00000002)
+20:02:23.872537 http.c:804              <= Recv header:
+20:02:23.872561 http.c:845              == Info: Connection #0 to host github.com left intact
+To https://github.com/saadkhi/Cloud-tasks-CC.git
+   b333a1c..98244bf  main -> main
