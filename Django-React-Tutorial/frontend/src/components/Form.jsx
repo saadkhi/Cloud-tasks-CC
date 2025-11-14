@@ -10,19 +10,22 @@ function Form({ route, method }) {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
-    const name = method === "Login" ? "Login" : "Register"
+    const name = method === "login" ? "Login" : "Register"
 
     const handleSubmit = async (e) => {
         setLoading(true);
         e.preventDefault();
 
-        try { 
+        try {
             const res = await api.post(route, {username, password})
-            if ( method === 'login') {
-                localStorage.setItem(ACCESS_TOKEN, res.data.access);
-                localStorage.setItem( REFRESH_TOKEN, res.data.refresh);
+            // method prop is passed as 'login' or 'register'
+            if (method === 'login') {
+                // on successful login store tokens and navigate to home
+                if (res?.data?.access) localStorage.setItem(ACCESS_TOKEN, res.data.access);
+                if (res?.data?.refresh) localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
                 navigate('/');
             } else {
+                // after registration go to login page
                 navigate('/login');
             }
         }
