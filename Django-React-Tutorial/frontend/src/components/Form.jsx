@@ -2,7 +2,7 @@ import { useState } from "react"
 import api from "../api"
 import { useNavigate } from "react-router-dom"
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants"
-import "../styles/Form.css"
+import "../styles/Auth.css"
 
 function Form({ route, method }) {
     const [username, setUsername] = useState("")
@@ -37,25 +37,42 @@ function Form({ route, method }) {
 
     }
 
-    return <form onSubmit={handleSubmit} className="form-container">
-        <h1> {name} </h1>
-        <input
-            className="form-input"
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Username"
-        />
-        <input
-            className="form-input"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-        />
-        <button className="form-button" type="submit">
-            {name}
-        </button>
+    return <form onSubmit={handleSubmit} className="auth-container">
+        <h1>{name}</h1>
+        <div className="auth-form">
+            <div className="auth-form-group">
+                <label htmlFor="username">Username</label>
+                <input
+                    id="username"
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="Enter your username"
+                    required
+                />
+            </div>
+            <div className="auth-form-group">
+                <label htmlFor="password">Password</label>
+                <input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Enter your password"
+                    required
+                />
+            </div>
+            <button className="auth-button" type="submit" disabled={loading}>
+                {loading ? "Loading..." : name}
+            </button>
+        </div>
+        <div className="auth-link">
+            {method === "login" ? (
+                <>Don't have an account? <a href="/register">Register here</a></>
+            ) : (
+                <>Already have an account? <a href="/login">Login here</a></>
+            )}
+        </div>
     </form>
 }
 
